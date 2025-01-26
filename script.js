@@ -33,6 +33,6 @@ document.querySelectorAll('.rose').forEach(rose => {
     // Hide the message box after 3 seconds
     setTimeout(() => {
       messageBox.style.visibility = 'hidden';
-    }, 3000);
+    }, 5000);
   });
 });
