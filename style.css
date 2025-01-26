@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  overflow: hidden; /* Prevent scrollbars during the animation */
+}
+
+.garden {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.rose {
+  font-size: 50px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#happyRoseDayMessage {
+  font-family: 'Sacramento', cursive; /* Beautiful script font */
+  font-size: 30px;
+  color: #ff3366;
+  margin-top: 30px;
+  animation: fadeIn 2s ease-out;
+  letter-spacing: 2px;
+}
+
+.message-box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  display: inline-block;
+  max-width: 80%;
+  font-size: 18px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.rose.active {
+  transform: scale(3);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3);
+  z-index: 10;
+}
+
+.rose.rain {
+  position: absolute;
+  top: -20px;
+  animation: rain 3s linear infinite;
+  opacity: 1;
+  font-size: 25px; /* Smaller roses */
+}
+
+@keyframes rain {
+  0% {
+    top: -20px;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
